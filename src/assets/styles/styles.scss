@@ -12,13 +12,13 @@ body,p,input, button{
   .fade-enter, .fade-leave-to {
     opacity: 0;
   }
-   
+
 .header{
     &__top{
         height: 43px;
-        background: #4cb1ca;        
+        background: #4cb1ca;
     }
-    &__container{ 
+    &__container{
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -44,23 +44,40 @@ body,p,input, button{
                 border-right: 1px solid #fff;
             }
         }
-        
     }
     &__main-container{
         display: flex;
+        justify-content: space-between;
     }
     &__main-container{
         display: flex;
         align-items: center;
+        height: 107px;
+        align-items: center;
     }
     &__nav-link{
-        font-family: $font-family;
-        font-size: 14px;
-        font-weight: bold;
-        text-decoration: none;
-        color: $color-gray;
-        text-transform: uppercase;
-        margin: 0 12px;
+        @extend %big-font-header;
+    }
+    &__icon{
+        display: block;
+        background: $color-green;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 2px;
+    }
+    &__right{
+        display: flex;
+        align-items: center;
+    }
+    &__search{
+        margin-right: 13px;
+    }
+    &__cart{
+        @extend %big-font-header;
     }
 }
 .logo{

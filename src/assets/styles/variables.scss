@@ -1,2 +1,13 @@
-$font-family:'Open Sans';  
+$font-family:'Open Sans';
 $color-gray:#656565;
+$color-green:#7db122;
+
+%big-font-header{
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: $color-gray;
+  text-transform: uppercase;
+  margin: 0 12px;
+}

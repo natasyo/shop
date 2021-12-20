@@ -20,21 +20,30 @@
                 <router-link to="/signup">Sign Up</router-link>
               </div>
         </div>
-        <div class="header__main">
-          <div class="container header__main-container">
-            <router-link class="logo header__logo" to="/">LEO Shop</router-link>
-            <div class="header__nav">
-              <router-link class="header__nav-link" to="/">Home  </router-link>
-              <a class="header__nav-link" href="/">women</a>
-              <a class="header__nav-link" href="/">men</a>
-              <a class="header__nav-link" href="/">other</a>
-              <a class="header__nav-link" href="/">purchase</a>
-            </div>
-            <SearchComponent/>
-          </div>
-
+      </div>
+    <div class="header__main">
+      <div class="container header__main-container">
+        <router-link class="logo header__logo" to="/">LEO Shop</router-link>
+        <div class="header__nav">
+          <router-link class="header__nav-link" to="/">Home  </router-link>
+          <a class="header__nav-link" href="/">women</a>
+          <a class="header__nav-link" href="/">men</a>
+          <a class="header__nav-link" href="/">other</a>
+          <a class="header__nav-link" href="/">purchase</a>
+        </div>
+        <div class="header__right">
+          <SearchComponent class="header__search"/>
+          <a href="/" class="header__icon">
+            <img src="../assets/images/pay.png" alt="">
+          </a>
+          <a href="/" class="header__icon">
+            <img src="../assets/images/basket.png" alt="">
+          </a>
+          <a href="/" class="header__cart">Cart (0)</a>
         </div>
       </div>
+
+    </div>
   </div>
 </template>
 
