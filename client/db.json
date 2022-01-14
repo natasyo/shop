@@ -1,0 +1,28 @@
+{
+    "products": [
+      { "id": 1, "title": "Lorem Ipsum is simply.","oldPrice": "588.00", "price": "388.00","currency":"usd", "image":"glasses1.png" },
+      { "id": 2, "title": "Nullam vestibulum.", "price": "38.00","currency":"usd" , "image":"glasses2.png"},
+      { "id": 3, "title": "Donec et lorem suscipit.","oldPrice": "588.00", "price": "38.00","currency":"usd" , "image":"glasses3.png"},
+      { "id": 4, "title": "Lorem Ipsum is simply.", "price": "388.00","currency":"usd", "image":"glasses4.png" },
+      { "id": 5, "title": "Nullam vestibulum.", "price": "38.00","currency":"rur" , "image":"glasses5.png"},
+      { "id": 6, "title": "Donec et lorem suscipit.","oldPrice": "248.00", "price": "38.00","currency":"usd" , "image":"glasses6.png"},
+      { "id": 7, "title": "Donec et lorem suscipit.","oldPrice": "188.00", "price": "138.00","currency":"usd" , "image":"glasses7.png"},
+      { "id": 8, "title": "Glasess.","oldPrice": "208.00", "price": "128.00","currency":"usd" , "image":"glasses8.png"},
+      { "id": 9, "title": "Glasess.dfsdfdsfdsf","oldPrice": "28.00", "price": "18.00","currency":"rur" , "image":"glasses9.png"}
+    ],
+    "currenciesConverter":{
+     
+       "usd": {
+        "rur":"74.2926", 
+        "byn":"2.549"
+    },
+      "rur":{
+        "usd":"0.0135",
+        "byn":"0.0344"
+      },
+      "byn":{
+        "rur":"29.1458",
+        "usd":"0.3923"
+      }
+}
+  }

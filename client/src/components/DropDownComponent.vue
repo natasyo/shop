@@ -33,7 +33,6 @@ export default {
   },
   methods: {
     changeLanguage: function (key) {
-      console.log('current' + this.title.replace(':', ''))
       this.$emit('changeCurrentItem', {
         current: key,
         name: 'current' + this.title.replace(':', '')

@@ -1,6 +1,17 @@
 @import '../fonts/stylesheet.css';
+html, body,#app{
+    height: 100%;
+}
+#app{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 body,p,input, button{
     font-family: $font-family;
+}
+.content{
+    flex-grow: 1;
 }
 .container {
     max-width: 1024px;
@@ -12,7 +23,15 @@ body,p,input, button{
   .fade-enter, .fade-leave-to {
     opacity: 0;
   }
-
+h2{
+    font-family: $font-family;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #635f57;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
 .header{
     &__top{
         height: 43px;
@@ -33,17 +52,13 @@ body,p,input, button{
         a{
             color:#fff;
             text-decoration: none;
-        }
-    }
-    &__top-nav{
-        display: flex;
-        a{
             display: block;
             padding: 0 19px 0 5px;
             &:first-child{
                 border-right: 1px solid #fff;
             }
         }
+        display: flex; 
     }
     &__main-container{
         display: flex;
@@ -87,4 +102,41 @@ body,p,input, button{
     text-transform: uppercase;
     text-decoration: none;
     color: $color-gray;
+}
+
+.form{
+    max-width: 300px;
+    margin: 10px auto 30px;
+    &__field{
+        display: flex;
+        flex-direction: column;
+        font-family: $font-family;
+        margin-bottom: 15px;
+        align-items: flex-start;
+    }
+    &__label{
+        font-size: 14px;
+        color: $color-gray;
+        margin-bottom: 5px;
+    }
+    &__text{
+        border: 1px solid #c6c6c6;
+        height: 29px;
+        width: 100%;
+        padding: 0 8px;
+        border-radius: 0;
+        &:focus-visible{
+            outline: 0;
+            border-color: $color-green;
+        }
+    }
+    &__button{
+        background: $color-green;
+        border: 0;
+        color: #fff;
+        height: 40px;
+        padding: 10px 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
 }

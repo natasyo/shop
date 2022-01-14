@@ -9,7 +9,7 @@
                   @changeCurrentItem="chengeCurrent"/>
                   <drop-down-component
                   title="Currency:" :items="currencies"
-                  :currentItem="currentCurrency"
+                  :currentItem="currCurrency"
                   @changeCurrentItem="chengeCurrent"/>
               </div>
               <div class="header__top-nav">
@@ -63,17 +63,37 @@ export default {
         ru: 'Русский',
         en: 'English'
       },
-      currencies: {
-        usd: 'USD',
-        byn: 'BYN'
-      },
-      currentCurrency: 'usd',
       currentLanguage: 'ru'
     }
   },
+  props: {
+
+  },
+  computed: {
+    currencies () {
+      const currObj = {}
+      const currensyItems = this.$store.state.currencies.items
+      for (const item in currensyItems) {
+        currObj[item] = item.toUpperCase()
+        console.log(currObj)
+      }
+      return currObj
+    },
+    currCurrency () {
+      return this.$store.state.currencies.current
+    }
+  },
+  mounted () {
+
+  },
   methods: {
     chengeCurrent (data) {
+      this.$store.commit('changeCurrentCurrency', data.current)
+      console.log(this.$store.state)
       this[data.name] = data.current
+      this.$emit('changeSettings', {
+        data
+      })
     }
   }
 }
