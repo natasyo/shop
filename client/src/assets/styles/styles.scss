@@ -1,29 +1,36 @@
-@import '../fonts/stylesheet.css';
-html, body,#app{
+@import "../fonts/stylesheet.css";
+html,
+body,
+#app {
     height: 100%;
 }
-#app{
+#app {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-body,p,input, button{
+body,
+p,
+input,
+button {
     font-family: $font-family;
 }
-.content{
+.content {
     flex-grow: 1;
 }
 .container {
     max-width: 1024px;
     margin: 0 auto;
 }
-.fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
-  }
-  .fade-enter, .fade-leave-to {
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
     opacity: 0;
-  }
-h2{
+}
+h2 {
     font-family: $font-family;
     font-size: 24px;
     letter-spacing: -0.01em;
@@ -32,48 +39,48 @@ h2{
     margin-top: 50px;
     margin-bottom: 25px;
 }
-.header{
-    &__top{
+.header {
+    &__top {
         height: 43px;
         background: #4cb1ca;
     }
-    &__container{
+    &__container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 100%;
     }
-    &__top-left{
+    &__top-left {
         display: flex;
     }
-    &__top-nav{
+    &__top-nav {
         font-family: $font-family;
         font-size: 13px;
-        a{
-            color:#fff;
+        a {
+            color: #fff;
             text-decoration: none;
             display: block;
             padding: 0 19px 0 5px;
-            &:first-child{
+            &:first-child {
                 border-right: 1px solid #fff;
             }
         }
-        display: flex; 
+        display: flex;
     }
-    &__main-container{
+    &__main-container {
         display: flex;
         justify-content: space-between;
     }
-    &__main-container{
+    &__main-container {
         display: flex;
         align-items: center;
         height: 107px;
         align-items: center;
     }
-    &__nav-link{
+    &__nav-link {
         @extend %big-font-header;
     }
-    &__icon{
+    &__icon {
         display: block;
         background: $color-green;
         border-radius: 50%;
@@ -84,18 +91,18 @@ h2{
         justify-content: center;
         margin: 0 2px;
     }
-    &__right{
+    &__right {
         display: flex;
         align-items: center;
     }
-    &__search{
+    &__search {
         margin-right: 13px;
     }
-    &__cart{
+    &__cart {
         @extend %big-font-header;
     }
 }
-.logo{
+.logo {
     font-family: $font-family;
     font-weight: bold;
     font-size: 38px;
@@ -104,33 +111,41 @@ h2{
     color: $color-gray;
 }
 
-.form{
+.form {
     max-width: 300px;
     margin: 10px auto 30px;
-    &__field{
+    &__field {
         display: flex;
         flex-direction: column;
         font-family: $font-family;
         margin-bottom: 15px;
         align-items: flex-start;
+        &_error {
+            font-family: $font-family;
+            font-size: 11px;
+            color: $color-error;
+        }
     }
-    &__label{
+    &__label {
         font-size: 14px;
         color: $color-gray;
         margin-bottom: 5px;
     }
-    &__text{
+    &__text {
         border: 1px solid #c6c6c6;
         height: 29px;
         width: 100%;
         padding: 0 8px;
         border-radius: 0;
-        &:focus-visible{
+        &:focus-visible {
             outline: 0;
             border-color: $color-green;
         }
+        &_error {
+            border-color: $color-error;
+        }
     }
-    &__button{
+    &__button {
         background: $color-green;
         border: 0;
         color: #fff;

@@ -1,13 +1,14 @@
-$font-family:'Open Sans';
-$color-gray:#656565;
-$color-green:#7db122;
-$color-blue:#4cb1ca;
-$color-product-img:#eff1f0;
-$footer-color-text:#fff;
-$footer-color-contacts:#39a0b9;
-$footer-bottom-color:#0b4b5a;
+$font-family: "Open Sans";
+$color-gray: #656565;
+$color-green: #7db122;
+$color-blue: #4cb1ca;
+$color-product-img: #eff1f0;
+$footer-color-text: #fff;
+$footer-color-contacts: #39a0b9;
+$footer-bottom-color: #0b4b5a;
+$color-error: red;
 
-%big-font-header{
+%big-font-header {
   font-family: $font-family;
   font-size: 14px;
   font-weight: bold;
