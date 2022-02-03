@@ -1,14 +1,14 @@
 <template>
   <Header
-  :currentCurrencyProp="currentCurrency"
-  :currenciesArray="currencyData"
-  @changeSettings="onChangeSettings"
+    :currentCurrencyProp="currentCurrency"
+    :currenciesArray="currencyData"
+    @changeSettings="onChangeSettings"
   />
   <div class="content">
-     <router-view/>
+    <router-view />
   </div>
 
-  <Footer/>
+  <Footer />
 </template>
 <script>
 // import axios from 'axios'
@@ -18,10 +18,12 @@ export default {
   data: function () {
     return {
       currentCurrency: 'usd',
-      currencyData: [{
-        id: 'usd',
-        designation: '$'
-      }]
+      currencyData: [
+        {
+          id: 'usd',
+          designation: '$'
+        }
+      ]
     }
   },
   components: {
@@ -29,15 +31,6 @@ export default {
     Footer
   },
   mounted () {
-    // axios.get('http://localhost:3000/currencies')
-    //   .then(response => {
-    //     this.currencyData = response.data
-    //   })
-    // this.$router.push({
-    //   params: {
-    //     currentCurrency: this.currentCurrency
-    //   }
-    // })
   },
   methods: {
     onChangeSettings (value) {
@@ -48,19 +41,19 @@ export default {
 }
 </script>
 <style lang="scss">
-  #app {
-    font-family: $font-family
-  }
+#app {
+  font-family: $font-family;
+}
 
-  #nav {
-    padding: 30px;
+#nav {
+  padding: 30px;
 
-    a {
-      font-weight: bold;
-      color: #2c3e50;
-      &.router-link-exact-active {
-        color: #42b983;
-      }
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
     }
   }
+}
 </style>

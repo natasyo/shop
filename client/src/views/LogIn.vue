@@ -11,7 +11,7 @@
             v-model="email"
             :class="{
               form__text: true,
-              form__text_error: v$.email.$errors.length,
+              form__text_error: v$.email.$errors.length
             }"
             placeholder="example@email.ru"
           />
@@ -32,7 +32,7 @@
             id="password"
             :class="{
               form__text: true,
-              form__text_error: v$.password.$errors.length,
+              form__text_error: v$.password.$errors.length
             }"
             v-model="password"
             placeholder="пароль"
@@ -79,13 +79,17 @@ export default {
   },
   methods: {
     login (e) {
+      this.v$.$validate()
       axios
         .post('/login', {
           email: this.email,
           password: this.password
         })
         .then((resp) => {
-          if (resp.status === 200) this.$router.push('/')
+          if (resp.data.token) {
+            this.$store.commit('setUser', resp.data)
+            this.$router.go(-1)
+          }
         })
         .catch((error) => {
           console.log(error)
@@ -95,5 +99,4 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-</style>
+<style lang="scss"></style>

@@ -33,15 +33,13 @@ export default {
     BannerItem,
     Products
   },
-  mounted () {
-    // console.log('-----------------', this.$route.params.currentCurrency)
-  }
+  mounted () {}
 }
 </script>
 <style lang="scss">
 .home {
   width: 100%;
-  &__products-container{
+  &__products-container {
     max-width: calc(75% - 28px);
     justify-content: space-between;
   }

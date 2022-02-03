@@ -117,7 +117,6 @@ export default {
               })
               .then((resp) => {
                 const isUniqueValue = resp.data.isUnique
-                console.log(typeof isUniqueValue, isUniqueValue)
                 return isUniqueValue
               })
             return false

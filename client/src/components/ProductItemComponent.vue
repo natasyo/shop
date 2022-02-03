@@ -63,7 +63,6 @@ export default {
           price = this.currencies[this.productData.currency][this.currency] * this.productData.oldPrice
         }
       }
-      console.log(price)
       return Math.ceil((price) * 100) / 100
     },
     ...mapState({
